@@ -1,0 +1,139 @@
+.home-page {
+    .nav__logo--desktop {
+        animation: navIn .3s ease-out;
+        animation-fill-mode: both;
+        animation-delay: 1s;
+    }
+
+
+        .nav__item {
+            animation: navIn .3s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .nav__item:nth-child(0) {
+            animation-delay: 1.1s;
+        }
+        .nav__item:nth-child(1) {
+            animation-delay: 1.2s;
+        }
+        .nav__item:nth-child(2) {
+            animation-delay: 1.3s;
+        }
+        .nav__item:nth-child(3) {
+            animation-delay: 1.4s;
+        }
+        .nav__item:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        .nav__footer {
+
+            animation: navIn .3s ease-out;
+            animation-fill-mode: both;
+            animation-delay: 1.6s;
+        }
+
+}
+
+@keyframes navIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+.nav {
+    @apply fixed left-0 top-0 ;
+    z-index: 99;
+    width: 0;
+        transition: width .1s ease-in;
+    &--open {
+        width: 100%;
+        }
+    @screen xl {
+        width: 15%;
+    }
+    @screen 2xl {
+        width: 13%;
+    }
+
+
+    &__content {
+        @apply h-screen flex flex-col justify-center xl:justify-between items-start bg-brand-gray-400 pb-32 overflow-hidden;
+        box-shadow: 0px 30px 25px 0px #00000024;
+        @screen lg {
+            box-shadow: none;
+        }
+        width: 0%;
+        white-space: nowrap;
+
+        transition: width .1s ease-in;
+        &--open {
+            width: 83%;
+        transition: width .3s ease-out;
+        }
+        @screen xl {
+            width: 100%;
+        white-space: normal;
+        }
+
+
+    }
+
+    &__logo {
+        @apply block;
+
+        &--desktop{
+            @apply hidden xl:block mt-8 ml-8;
+        width: 70px;
+        }
+        &--mobile {
+            width: 47px;
+        }
+
+
+    }
+
+    &__items {
+        @apply mb-32 xl:mb-0 pl-12 list-disc;
+    }
+
+    &__item {
+         @apply text-brand-magenta-500;
+    }
+    
+    &__item:not(:last-of-type) {
+        @apply mb-4;
+    }
+
+    &__link {
+        @apply font-walsheim font-bold text-4xl xl:text-xl;
+        transition: color .3s ease-in-out;
+
+        &:hover {
+            @apply text-brand-blue-500;
+        }
+    }
+
+    &__footer {
+        @apply pr-8 justify-self-end;
+
+        &-text {
+            @apply pl-10 mb-4
+        }
+
+    }
+    &__mobile-bar {
+        @apply p-4 xl:hidden w-screen flex items-center justify-between bg-brand-gray-400;
+    }
+}
+
+.current-menu-item {
+        @apply text-brand-blue-500;
+}

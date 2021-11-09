@@ -1,0 +1,7 @@
+.button {
+	@apply inline-block bg-brand-magenta-500 text-center text-white font-walsheim font-bold text-lg px-8 py-3 cursor-pointer;
+	&:hover {
+		@apply bg-brand-blue-500
+	}
+	transition:  background-color .3s ease-in-out;
+}

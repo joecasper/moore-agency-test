@@ -1,0 +1,51 @@
+.text-block {
+    p {
+        @apply text-lg font-light mb-8;
+
+        line-height: 32px;
+    }
+
+    >*:last-of-type {
+        @apply mb-2;
+    }
+
+    strong {
+        @apply font-semibold;
+    }
+
+    ul {
+        @apply list-disc pl-[1.5rem];
+    }
+    &__clean-list {
+        @apply list-none !important;
+        li {
+            @apply ml-8 font-recife font-light text-xl;
+        }
+    }
+
+    li {
+        @apply mb-2;
+    }
+
+    a:not(.arrow-link) {
+        @apply text-brand-magenta-500 font-normal;
+    }
+
+    h2 {
+        @apply mb-3 font-walsheim font-bold text-3xl uppercase border-brand-gray-600 border-b pb-2;
+    }
+
+    h3 {
+        @apply mb-3 font-recife font-light text-3xl md:text-[2.81rem] leading-none;
+    }
+
+    h4 {
+        @apply mb-3 font-recife font-light text-3xl leading-none;
+ 
+    }
+
+    &__bold-headline {
+        @apply font-walsheim font-bold uppercase text-3xl mb-3 !important;
+    }
+
+}

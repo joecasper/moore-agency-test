@@ -1,0 +1,65 @@
+.portfolio {
+    @apply flex flex-wrap md:grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-max mb-8;
+
+    &__piece {
+        @apply row-span-1 col-span-1 relative;
+
+        &--large {
+            @apply row-span-2 col-span-2;
+        }
+
+        &:hover {
+            .portfolio__image {
+                transform: scale(1.1);
+            }
+            .portfolio__photo::before {
+            	opacity:  .2;
+            }
+            .portfolio__client::before {
+            	width: 100%;
+            }
+        }
+
+    }
+
+    &__photo {
+        @apply overflow-hidden;
+
+        &::before {
+            content: "";
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            opacity: 0.5;
+            background: #2D2329;
+            z-index: 11;
+        transition: opacity .5s ease-in-out;
+        }
+    }
+
+    &__image {
+        @apply w-full;
+        transition: transform .5s ease-in-out;
+    }
+
+    &__client {
+        @apply font-walsheim font-bold text-brand-gray-200 text-3xl absolute left-5 bottom-5 p-2;
+        z-index: 15;
+        &::before {
+        	@apply bg-brand-magenta-500;
+            content: "";
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            z-index: -1;
+        transition: width .5s ease-in-out;
+        width: 0%;
+
+        }
+    }
+
+}

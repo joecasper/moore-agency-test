@@ -1,0 +1,31 @@
+.bar-slider {
+    @apply text-center mb-24 lg:mb-32;
+
+    &__headline {
+        @apply font-recife font-light text-5xl md:text-6xl text-center mb-12 lg:mb-16;
+    }
+
+    &__slider {
+        @apply bg-white flex justify-around items-center;
+    }
+
+    &__slides {
+        @apply flex;
+        width: 50%;
+        @screen md {
+        width: 75%;
+        }
+
+        @screen lg {
+            width: 85%;
+        }
+
+        @screen 2xl {
+            width: 90%;
+        }
+    }
+
+    &__slide {
+        @apply h-full w-1/4 flex justify-center items-center py-16 md:p-16;
+    }
+}

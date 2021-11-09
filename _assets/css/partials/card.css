@@ -1,0 +1,6 @@
+.card {
+	@apply bg-white w-full lg:w-3/4 2xl:w-1/2 mx-auto p-12 mb-16;
+	&__title {
+		@apply font-walsheim font-bold text-3xl uppercase text-center  border-brand-gray-600 border-b pb-2 mb-6;
+	}
+}

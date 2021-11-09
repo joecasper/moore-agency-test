@@ -1,0 +1,63 @@
+.arrow-link {
+	
+	@apply leading-none text-brand-magenta-500 font-walsheim font-bold text-lg py-3 flex ;
+	transition: color .3s ease-in-out;
+	&:hover {
+		@apply text-brand-blue-500;
+		.arrow-link__arrow {
+			transform:  translatex(1rem);
+		}
+	}
+	&__arrow {
+		@apply ml-4;
+		width: 52px;
+		path {
+			@apply stroke-current;
+		}
+		transition:  transform .3s ease-in-out;
+	}
+	&--small {
+		@apply text-sm;
+		.arrow-link__arrow {
+			width: 42px;
+		}
+	}
+	&--team {
+		@apply text-left ; 
+		padding-left: 4.5rem;
+		.fab {
+			@apply text-brand-blue-500 mr-2;
+			font-size:1.2rem;
+		}
+	}
+	&--slide {
+		@apply mt-8 lg:mt-0 ml-12 lg:ml-32;
+		&-home {
+			@apply mt-24 lg:mt-0;
+			animation: ctaIn 1s ease-out;
+			animation-fill-mode: both;
+			animation-delay: 3.8s;
+		}
+
+	}
+	&--cta{
+	@apply mt-1 md:mt-8 lg:mt-0 ml-12 lg:ml-32 relative;	
+	top: 1.5rem;
+	@screen lg {
+		top: 0;
+
+	}
+	}
+	
+}
+
+@keyframes ctaIn {
+	from {
+		transform: translateX(-20%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}

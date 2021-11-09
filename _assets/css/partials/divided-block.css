@@ -1,0 +1,22 @@
+.divided-block {
+	@apply flex flex-col lg:flex-row mb-16;
+	&__left {
+		@apply w-full lg:w-1/2 mb-3 md:mb-8 lg:mb-0 flex flex-col lg:flex-row justify-between lg:pr-16 ;
+	}
+	&__divider {
+		@apply hidden md:flex bg-13 w-[17px] flex-shrink-0 h-full ml-16;
+        background-image: url('../../img/pattern_dot.png');
+        &--mobile {
+        	@apply flex md:hidden flex-shrink-0 ml-0 h-auto mr-4;
+        }
+        animation: patternScroll 1s linear infinite;
+        background-position-y: 0%;
+	}
+	&__right {
+		@apply w-full flex flex-wrap items-stretch lg:w-1/2;
+
+	}
+	&__headline {
+		@apply font-recife font-light text-5xl md:text-6xl mb-6;
+	}
+}

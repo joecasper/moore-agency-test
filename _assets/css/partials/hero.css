@@ -1,0 +1,478 @@
+.hero {
+    @apply relative mb-10 md:mb-24;
+
+    &::before {
+        @apply bg-brand-gray-400 absolute left-0 top-0;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 108%;
+        animation: heroWipe .7s ease-in-out;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        z-index: 90;
+    }
+
+    &--home {
+        @apply mb-0;
+
+    }
+
+    &--careers {
+        @apply mb-48;
+    }
+
+    @screen lg {
+        padding-left: 5.5rem;
+    }
+
+    &__home-headline {
+        @apply hidden lg:block;
+
+        &-mobile {
+            @apply lg:hidden;
+        }
+    }
+
+    &__home-mobile-headline {
+        @apply lg:hidden absolute;
+        left: 3rem;
+        top: 12.4rem;
+
+        @screen md {
+            top: initial;
+            bottom: 4.1rem;
+
+        }
+
+    }
+
+    &__home-mobile-subtext {
+        @apply font-recife font-light text-6xl left-0;
+
+        &--white {
+            @apply text-white absolute;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.30);
+            clip-path: polygon(0 0, 100% 0, 100% 56%, 0 56%);
+
+        }
+    }
+
+    &__home-mobile-moore {
+        @apply w-[290px] mt-4;
+    }
+
+    &__home-subtext {
+        @apply overflow-hidden font-recife font-light text-6xl absolute left-[1rem] lg:left-0 z-50;
+        line-height: 1.2;
+        top: 4rem;
+        clip-path: polygon(0 0, 48% 0, 48% 100%, 0 100%);
+
+        span {
+            display: block;
+            animation: homeHeroBlackText .7s ease-out;
+            animation-delay: 1.6s;
+            animation-fill-mode: both;
+        }
+
+        &--white {
+            @apply text-white;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.60);
+            clip-path: polygon(48% 0, 100% 0, 100% 100%, 48% 100%);
+
+            span {
+                display: block;
+                animation: homeHeroWhiteText .7s ease-out;
+                animation-delay: 1.6s;
+                animation-fill-mode: both;
+            }
+
+        }
+
+    }
+
+    &__home-moore {
+        @apply hidden lg:block left-0 absolute z-50 overflow-hidden;
+        pointer-events: none;
+        width: auto;
+        transform: none;
+        top: 10rem;
+        height: 90%;
+        left: 3.5rem;
+
+        svg {
+            height: 60%;
+            animation: homeMoore 1s ease-out;
+            animation-delay: 2.4s;
+            animation-fill-mode: both;
+        }
+
+        @screen xl {
+            left: 3.5rem;
+
+            svg {
+                height: 70%;
+            }
+        }
+
+        @screen 2xl {
+            left: 2.8rem;
+
+            svg {
+                height: 80%;
+            }
+        }
+
+        &-o {
+            opacity: 0;
+            animation: homeMooreO 1s ease-out;
+            animation-delay: 4.2s;
+            animation-fill-mode: both;
+        }
+
+        &-re {
+            animation: homeMooreRe 1s ease-out;
+            animation-delay: 3.8s;
+            animation-fill-mode: both;
+        }
+    }
+
+    &__title {
+        @apply absolute left-[1rem] md:left-[4rem] bottom-[-3.7rem] md:bottom-[-5.7rem] lg:bottom-[-5.3rem] lg:left-0 z-50 lg:text-center;
+        pointer-events: none;
+
+        &--slider {
+            @apply left-[3rem] top-[10.3rem] md:top-[auto] md:bottom-[-.5rem];
+        }
+
+
+
+        @screen lg {
+            left: 6.2rem;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+        @screen 2xl {
+            left: 6.1rem;
+        }
+
+
+        &--cta {
+            @apply left-[3rem] lg:left-[0.7rem] 2xl:left-[.8rem] lg:bottom-[-3.9rem];
+        }
+
+        &--small {
+            left: 2.8rem;
+            bottom: -2.4rem;
+
+            @screen md {
+                bottom: -4rem;
+            }
+
+            @screen lg {
+                left: .4rem;
+            }
+
+            @screen 2xl {
+                left: .6rem;
+            }
+
+        }
+
+        &-text {
+            @apply overflow-hidden font-recife font-light z-50 inline-block lg:absolute left-0 lg:whitespace-nowrap;
+            font-size: 5rem;
+            clip-path: polygon(0 56%, 100% 56%, 100% 100%, 0 100%);
+
+
+            span {
+                display: block;
+                animation: heroBlackText .7s ease-out;
+                animation-delay: 1.5s;
+                animation-fill-mode: both;
+            }
+
+            @screen md {
+                font-size: 8rem;
+            }
+
+
+            @screen lg {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                line-height: 1.3;
+            }
+
+            @screen 2xl {
+                font-size: 10.69rem;
+            }
+
+            &--white {
+                @apply absolute text-white;
+                clip-path: polygon(0 0, 100% 0, 100% 56%, 0 56%);
+                text-shadow: 0 1px 4px rgba(0, 0, 0, 0.30);
+
+                span {
+                    display: block;
+                    animation: heroWhiteText .7s ease-out;
+                    animation-delay: 1.5s;
+                    animation-fill-mode: both;
+                }
+
+            }
+
+            &--small {
+                font-size: 3rem;
+
+                @screen md {
+                    font-size: 5.5rem;
+                }
+
+                @screen 2xl {
+                    font-size: 6.94rem;
+                }
+            }
+        }
+    }
+
+    &__image {
+        @apply w-full;
+    }
+
+    &__video {
+        object-fit: cover;
+        width: 100%;
+        overflow: hidden;
+        height: 232px;
+        @screen md {
+            height: auto;
+        }
+    }
+
+    &__bar {
+        @apply hidden lg:flex bg-13 mx-auto absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        height: 60px;
+        background-image: url('../../img/pattern_dot.png');
+        animation: patternScroll 1s linear infinite;
+        background-position-y: 0%;
+    }
+
+    &__scroller {
+        @apply absolute bottom-0 bg-13;
+        background-image: url('../../img/pattern_dot.png');
+        left: 1rem;
+
+        height: 60%;
+
+        @screen md {
+            height: 40%;
+        }
+
+        @screen lg {
+            left: 10rem;
+            height: 160px;
+        }
+
+        width: 18px;
+        animation: patternScroll 1s linear infinite;
+        background-position-y: 0%;
+    }
+
+    &__slider {
+
+        img
+        {
+
+            height: 232px;
+
+            @screen md {
+                height: auto;
+            }
+        }
+        iframe {
+            transform: scale(1.2);
+            @screen md {
+                transform: none;
+            }
+        }
+    }
+
+    &__slide {}
+
+    &__slider-controls {
+        @apply hidden lg:block absolute;
+        right: 3rem;
+        bottom: 1rem;
+
+    }
+
+    &__slider-button {
+        @apply bg-brand-gray-900 bg-opacity-50 p-5;
+        transition: background .3s ease-in-out;
+
+        animation: controlRight 1s ease-out;
+        animation-delay: 4s;
+        animation-fill-mode: both;
+
+        &:hover {
+            @apply bg-brand-blue-500 bg-opacity-100;
+
+            svg {
+                transform: translatex(.5rem);
+            }
+        }
+
+        &--prev {
+            transform: rotate(180deg);
+            transform-origin: center;
+            animation: controlLeft 1s ease-out;
+            animation-delay: 4s;
+            animation-fill-mode: both;
+        }
+
+        svg {
+            width: 52px;
+            transition: transform .3s ease-in-out;
+        }
+    }
+}
+
+@keyframes controlLeft {
+    from {
+        transform: translateX(20%) rotate(180deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+@keyframes controlRight {
+    from {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes patternScroll {
+    from {
+        background-position-y: 0;
+    }
+
+    to {
+        background-position-y: 13px;
+    }
+}
+
+
+@keyframes heroWipe {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
+
+@keyframes heroBlackText {
+    from {
+        transform: translateY(-50%);
+
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+
+@keyframes heroWhiteText {
+    from {
+        transform: translateY(50%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes homeHeroBlackText {
+    from {
+        transform: translateX(50%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes homeHeroWhiteText {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes heroBar {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -30%);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0%);
+
+    }
+}
+
+@keyframes homeMoore {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+
+@keyframes homeMooreO {
+    from {
+        opacity: 0;
+        transform: translateX(1%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes homeMooreRe {
+    from {
+        transform: translatey(-8.6rem);
+    }
+
+    to {
+        transform: translatey(0);
+    }
+}

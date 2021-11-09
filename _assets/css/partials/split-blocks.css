@@ -1,0 +1,39 @@
+.split-blocks {
+    @apply flex flex-col lg:flex-row flex-wrap justify-between mt-24 md:mt-0 mb-12 lg:mb-32;
+    &--triple {
+        .split-block {
+            &__image-bg {
+                @apply hidden;
+            }
+
+        @apply w-full lg:w-1/3 lg:px-2;
+        } 
+    }
+}
+
+.split-block {
+    @apply w-full mb-12 lg:mb-0;
+
+    @screen lg {
+
+        width: 46%;
+
+    }
+
+    &__image {
+        @apply relative mb-6;
+
+        &-bg {
+            @apply bg-13 ;
+            background-image: url('../../img/pattern_dot.png');
+            display: block;
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            right: -2rem;
+            top: -2rem;
+            z-index: -1;
+        }
+    }
+}

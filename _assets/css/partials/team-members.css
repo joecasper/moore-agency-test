@@ -1,0 +1,194 @@
+.team {
+    @apply mb-48;
+}
+
+.team-members {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-4 2xl:gap-x-8 gap-y-24 px-8;
+}
+
+.team-member {
+    @apply relative block;
+  
+    &:nth-child(4n+1) {
+    transition-delay: .0s;
+    }
+    &:nth-child(4n+2) {
+    transition-delay: .2s;
+    }
+    &:nth-child(4n+3) {
+    transition-delay: .4s;
+    }
+      &:nth-child(4n+0) {
+    transition-delay: .6s;
+    }
+
+    &--has-bio {
+        @apply cursor-pointer;
+
+        &:hover {
+            .team-member__image {
+                transform: scale(1.1);
+            }
+
+            .team-member__bar {
+                animation-play-state: running !important;
+            }
+             .team-member__name::before {
+                width: 100%;
+            }
+            .arrow-link {
+
+            @apply text-brand-blue-500;
+            }
+        .arrow-link__arrow {
+            transform:  translatex(1rem);
+        }
+        }
+    }
+
+    &--modal {
+        @apply w-full;
+
+        @screen md {
+            float: left;
+            width: 50%;
+            margin-right: 2rem;
+        }
+
+        @screen lg {
+            width: 40%;
+        }
+
+        @screen xl {
+            width: 25%;
+        }
+    }
+
+
+    &__photo {
+        @apply overflow-hidden relative;
+
+        &::before {
+            @apply absolute w-full h-full top-0 left-0 z-10;
+            content: "";
+            display: block;
+            background-image: linear-gradient(180deg,rgba(0,0,0,0) 56%,#2d2329 105%);
+
+
+        }
+    }
+
+    &__image {
+        @apply w-full;
+        transition: transform .5s ease-in-out;
+    }
+
+    &__content {
+        @apply absolute flex items-end px-6 z-20 text-left;
+        bottom: -3rem;
+
+        @screen 2xl {
+
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+    }
+    &__info {
+        @apply flex flex-col justify-between;
+    }
+
+    &__bar {
+        @apply bg-13 mr-3 flex-shrink-0 absolute z-10 ;
+        background-image: url('../../img/pattern_dot--pink.png');
+        height: 160px;
+        width: 18px;
+        animation: patternScroll 1s linear infinite;
+        animation-play-state: paused !important;
+        left: 2rem;
+        bottom: 0rem;
+    }
+
+    &__name {
+        @apply absolute text-left font-walsheim font-bold text-brand-gray-200  mb-0 !important;
+            font-size:  1.4rem;
+        @screen md{
+            font-size:  1.7rem;
+        }
+        @screen lg {
+            font-size:  1.5rem;
+        }
+        @screen xl {
+            font-size:  1.1rem;
+        }
+        @screen 2xl {
+            font-size:  1.4rem;
+        }
+        left: 0;
+        bottom: 0;
+        bottom: 1rem;
+        margin-left: 4rem;
+        margin-right:  2rem;
+        padding: 0 .5rem;
+        z-index: 10;
+         &::before {
+            @apply bg-brand-magenta-500;
+            content: "";
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            z-index: -1;
+        transition: width .5s ease-in-out;
+        width: 0%;
+
+        }
+    }
+
+    &__modal {
+        @apply fixed flex flex-wrap bg-white w-11/12 z-[101] text-left text-brand-gray-900;
+        @screen 2xl {
+
+        width: 70%;
+        }
+        padding: 3.5rem;
+        max-height: 80vh;
+        box-shadow: 0 60px 25px -35px rgba(0, 49, 76, 0.10);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in;
+        overflow: scroll;
+
+        &--open {
+            transition: all .5s ease-out;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &-close {
+            @apply text-brand-magenta-500 font-bold fixed top-4 right-4 flex items-center cursor-pointer;
+
+            &-icon {
+                @apply ml-1;
+                width: 21px;
+            }
+        }
+    }
+}
+
+.modal-bg {
+    @apply flex bg-brand-blue-500 bg-opacity-[80%] h-screen w-screen fixed z-[100] top-0 left-0 cursor-pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in;
+
+    &--visible {
+        transition: all .5s ease-out;
+        @apply opacity-100;
+        visibility: visible;
+    }
+}

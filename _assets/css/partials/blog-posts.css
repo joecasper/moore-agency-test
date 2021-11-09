@@ -1,0 +1,22 @@
+.blog-feed{
+    @apply px-8 xl:pl-main xl:pr-64 mb-16;
+
+}
+
+.blog-posts {
+	@apply grid grid-cols-1 lg:grid-cols-2 gap-x-24 gap-y-16 mb-16;
+    &__headline {
+        @apply font-recife font-light text-6xl mb-3;
+    }
+    &__bar {
+        @apply bg-13 mx-auto mb-8;
+        width: 90%;
+        height: 17px;
+            background-image: url('../../img/pattern_dot.png');
+    }
+
+
+    .blog-excerpt:not(.block)  {
+        @apply hidden;
+    }
+}

@@ -1,0 +1,64 @@
+.client-quotes {
+    @apply mb-12 lg:mb-32;
+
+    &__headline {
+        @apply font-recife font-light text-6xl text-center mb-8;
+    }
+
+    &__slider {
+        @apply flex items-center justify-around;
+    }
+
+    &__control {
+        @apply hidden md:flex mx-4 flex-shrink-0;
+        width: 52px;
+
+        &--prev {
+            transform: rotate(180deg);
+            transform-origin: center;
+        }
+    }
+
+    &__slides {
+        @apply w-full bg-13 p-6 xl:p-12;
+
+        @screen md {
+            width: 80%;
+        }
+        @screen xl {
+            width: 85%;
+        }
+
+        @screen 2xl {
+            width: 90%;
+        }
+
+        background-image: url('../../img/pattern_dot.png');
+    }
+
+    &__slide {
+        @apply bg-white p-6 md:p-12 2xl:p-20 pb-8 h-full flex flex-col justify-between;
+    }
+
+    &__quote {
+        @apply font-recife font-light text-xl md:text-2xl xl:text-3xl text-center mb-8;
+        @screen md {
+        line-height: 42px;
+        }
+    }
+
+    &__attribution {
+        @apply text-right;
+
+    }
+
+    &__person {
+        @apply font-bold text-[1.56rem] leading-none mb-4;
+    }
+
+    &__organization {
+        @apply font-normal text-[1.19rem] leading-tight;
+    }
+
+
+}

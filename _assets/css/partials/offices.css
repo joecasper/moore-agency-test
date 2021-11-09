@@ -1,0 +1,77 @@
+.offices {
+    @apply grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 xl:gap-4 mb-20 px-4 lg:px-16 xl:pr-4;
+}
+.office {
+	@apply col-span-1 md:col-span-2 xl:col-span-1;
+    &:hover {
+        .office__bar {
+            animation-play-state: running !important;
+
+        }
+        .office__link {
+            @apply text-brand-blue-500;
+        }
+        .office__image {
+            transform: scale(1.1);
+        }
+    }
+
+    &__top {
+        @apply relative mb-3;
+
+        &::before {
+            content: "";
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            opacity: 0.5;
+            background: #2D2329;
+            z-index: 15;
+        }
+    }
+    &__photo {
+        @apply overflow-hidden;
+    }
+    &__image {
+        @apply w-full;
+        transition: transform .5s ease-in-out;
+    }
+
+    &__info {
+        @apply flex absolute;
+        z-index: 20;
+        left: 1rem;
+        @screen md {
+        left: 3rem;
+        }
+        @screen xl {
+        left: 1rem;
+        }
+        @screen 2xl {
+        left: 3rem;
+        }
+        bottom:  -2rem;
+    }
+    &__text {
+        @apply flex flex-col justify-end;
+    }
+
+    &__location {
+        @apply font-walsheim font-bold text-brand-gray-200 text-3xl mb-12;
+    }
+
+    &__bar {
+        @apply bg-13 mr-3;
+        background-image: url('../../img/pattern_dot--pink.png');
+        height: 160px;
+        width: 18px;
+         animation: patternScroll 1s linear infinite;
+         animation-play-state: paused !important;
+    }
+    &__link {
+        @apply flex items-center font-bold text-sm text-brand-magenta-500;
+        transition: color .3s ease-in-out;
+    }
+}

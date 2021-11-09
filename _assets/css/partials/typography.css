@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Recife-Display";
+    src: url("../../fonts/recife/RecifeDisplayWeb-Light.woff2") format("woff2"),
+        url("../../fonts/recife/RecifeDisplayWeb-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GT-Walsheim-Pro";
+    src: url("../../fonts/walsheim/gt-walsheim-bold.woff2") format("woff2"),
+        url("../../fonts/walsheim/gt-walsheim-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+
+.headline {
+    @apply font-recife font-light text-4xl md:text-6xl mb-6;
+}

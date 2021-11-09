@@ -1,0 +1,62 @@
+
+/*
+.contact-form {
+	@apply mb-32;
+	&__body {
+	@apply grid grid-cols-2 gap-8 mb-16;
+	}
+}
+
+.form-element {
+	@apply col-span-2 md:col-span-1;
+	&__text {
+		@apply text-[15px];
+	}
+	&__text-input {
+		@apply w-full border-b-[4px] border-brand-magenta-500 p-4 text-lg;
+		transition:  border-color .3s ease-in-out;
+		&:focus {
+			@apply border-brand-gray-900;
+		}
+	}
+}
+*/
+
+.gform_wrapper {
+
+	@apply mb-32;
+
+}
+.form-element {
+	@apply col-span-2 md:col-span-1;
+}
+
+.gform_fields {
+	@apply grid grid-cols-2 gap-8 mb-16;
+	input {
+
+	}
+}
+
+.gfield_label {
+
+		@apply text-[15px];
+}
+
+ .ginput_container > *{
+ 	@apply w-full border-b-[4px] border-brand-magenta-500 p-4 text-lg;
+ 	outline: 1px solid transparent;
+		transition:  all .3s ease-in-out;
+		&:focus {
+			@apply border-b-[4px] border-brand-blue-500;
+ 	outline: 1px solid theme('colors.brand-blue-500');
+		}	
+ }
+
+ .gform_footer {
+ 	@apply flex justify-center;
+ }
+
+ .gform_validation_container {
+ 	height: 0;
+ }

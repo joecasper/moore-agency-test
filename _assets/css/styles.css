@@ -1,0 +1,53 @@
+@import "tailwindcss/base";
+
+/*
+ * ─── BASE STYLES GO HERE ────────────────────────────────────────────────────────
+ */
+@import "partials/layout";
+@import "partials/typography";
+
+
+
+        
+/* ──────────────────────────────────────────────────────────────────────────────── */
+
+@import "tailwindcss/components";
+
+/*
+ * ─── COMPONENTS GO HERE ─────────────────────────────────────────────────────────
+ */
+
+@import "partials/nav";
+@import "partials/hamburger";
+@import "partials/button";
+@import "partials/arrow-link";
+@import "partials/hero";
+@import "partials/ticker";
+@import "partials/alternating-blocks";
+@import "partials/divided-block";
+@import "partials/blog-excerpt";
+@import "partials/text-block";
+@import "partials/split-blocks";
+@import "partials/centered-block";
+@import "partials/offices";
+@import "partials/portfolio";
+@import "partials/work-intro";
+@import "partials/work-blocks";
+@import "partials/client-quotes";
+@import "partials/timeline";
+@import "partials/video-embed";
+@import "partials/mantras-section";
+@import "partials/blog-posts";
+@import "partials/blog-post";
+@import "partials/team-members";
+@import "partials/bar-slider";
+@import "partials/card";
+@import "partials/form";
+@import "partials/services";
+@import "partials/blog-filters";
+@import "partials/footer";
+    
+
+/* ──────────────────────────────────────────────────────────────────────────────── */
+
+@import "tailwindcss/utilities";

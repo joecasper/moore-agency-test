@@ -1,0 +1,210 @@
+html {
+    @apply antialiased;
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-brand-gray-400 text-brand-gray-900 font-sans font-light;
+
+}
+
+.main-content {
+    @apply overflow-hidden w-full 3xl:mx-auto;
+    margin-top: 71px;
+
+    @screen xl {
+        margin-top: 0;
+        width: 85%;
+    }
+
+    @screen 2xl {
+        width: 87%;
+    }
+    @screen 3xl {
+        max-width: 1440px;
+    }
+}
+
+
+.bar-slider,
+.client-quotes {
+
+
+    .slick-list {
+        height: 100% !important;
+    }
+
+    .slick-track {
+        display: flex !important;
+        height: 100% !important;
+
+        .slick-slide {
+            display: flex !important;
+            height: auto !important;
+            align-items: center !important;
+            justify-content: center !important;
+
+            >div {
+                height: 100%;
+            }
+
+            >div>* {
+                display: flex !important;
+            }
+        }
+    }
+
+}
+
+.home-top-line {
+    @apply hidden md:block relative z-[-1] top-[-3rem] 2xl:left-[-1rem] h-[150px] xl:h-[350px];
+    path {
+         stroke-dasharray: 2000;
+          stroke-dashoffset: 2000;
+    animation:  lineDraw 3s ease-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+    }
+}
+
+
+.home-mobile-top-line {
+    @apply mb-[2rem] md:hidden relative z-[-1];
+    path {
+         stroke-dasharray: 2000;
+          stroke-dashoffset: 2000;
+    animation:  lineDraw 3s ease-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+    }
+}
+
+
+
+
+.home-middle-line {
+    @apply  hidden md:block relative top-[-2rem] left-[-1rem] z-[-1] mb-10;
+     path {
+         stroke-dasharray: 2000;
+          stroke-dashoffset: 2000;
+    animation:  lineDraw 3s ease-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+    }
+}
+
+
+.home-mobile-middle-line {
+    @apply md:hidden relative mb-10 mt-8;
+     path {
+         stroke-dasharray: 2000;
+          stroke-dashoffset: 2000;
+    animation:  lineDraw 3s ease-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+    }
+}
+
+@keyframes lineDraw {
+    to {
+          stroke-dashoffset: 4000;
+      }
+}
+
+
+.home-bottom-line {
+    @apply hidden md:block relative z-[-1] top-[-2rem];
+     path {
+         stroke-dasharray: 2200;
+          stroke-dashoffset: 2200;
+    animation:  lineDrawBottom 3s ease-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+    }
+}
+
+.home-mobile-bottom-line {
+    @apply relative md:hidden;
+     path {
+         stroke-dasharray: 2200;
+          stroke-dashoffset: 2200;
+    animation:  lineDrawBottom 3s ease-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+    }
+}
+@keyframes lineDrawBottom {
+    to {
+          stroke-dashoffset: 4400;
+      }
+}
+
+
+.footer-line {
+
+    @apply hidden md:block;
+     path {
+         stroke-dasharray: 3000;
+          stroke-dashoffset: 3000;
+    animation:  lineDrawFooter 3s ease-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+    }
+}
+
+.footer-mobile-line {
+    @apply mt-8 md:hidden;
+     path {
+         stroke-dasharray: 1200;
+          stroke-dashoffset: 1200;
+    animation:  lineDrawFooterMobile 3s ease-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+    }
+}
+
+
+@keyframes lineDrawFooter{
+    to {
+          stroke-dashoffset: 6000;
+      }
+}
+
+@keyframes lineDrawFooterMobile{
+    to {
+          stroke-dashoffset: 2400;
+      }
+}
+
+
+
+.main-padding {
+    @apply px-4 md:px-16 lg:px-main;
+}
+
+.nav-padding {
+    @apply px-4 lg:px-16 xl:pr-16 2xl:pr-nav;
+}
+
+.main-bottom-margin {
+    @apply mb-12 md:mb-32;
+
+}
+
+.aos-animate {
+    * {
+        animation-play-state: running !important;
+    }
+}
+
+.grecaptcha-badge {
+    display: none;
+}

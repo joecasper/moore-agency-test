@@ -1,0 +1,32 @@
+.blog-excerpt {
+	&__image-link {
+		@apply overflow-hidden mb-4 block;
+		&:hover {
+			.blog-excerpt__image {
+				 transform: scale(1.1);
+			}
+		}
+	}
+	&__image {
+		@apply w-full ;
+		transition: transform .5s ease-in-out;
+	}
+	&__title {
+		@apply font-walsheim font-bold text-3xl uppercase mb-4;
+		line-height: 33px;
+	}
+	&__copy {
+		@apply text-lg border-brand-gray-600 border-b pb-4 mb-4 font-normal;
+		line-height: 21px;
+	}&__author {
+		@apply mb-8 font-light;
+		a {
+			@apply underline text-brand-magenta-500;
+			transition: color .3s ease-in-out;
+			&:hover {
+				@apply text-brand-blue-500 no-underline;
+			}
+		}
+
+	}
+}

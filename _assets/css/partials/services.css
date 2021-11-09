@@ -1,0 +1,28 @@
+.services {}
+
+.service {
+    &__button {
+        @apply cursor-pointer;
+    }
+
+    &__text {
+        @apply font-recife font-light text-brand-magenta-500 mb-3 text-[2.5rem] text-left;
+        line-height: 50px;
+    }
+
+    &__content {
+        @apply pl-8 overflow-hidden;
+        max-height: 0;
+        transition: max-height .5s ease-in-out;
+
+        &--open {
+            max-height: 1000px;
+        }
+    }
+    ul {
+         @apply list-none list-outside !important;
+        li {
+            @apply ml-4 md:ml-8 font-recife font-light text-xl;
+        }
+    }
+}

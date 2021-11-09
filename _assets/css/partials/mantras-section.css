@@ -1,0 +1,43 @@
+.mantras-section {
+	@apply mb-32;
+
+    &__header {
+        @apply flex flex-col items-center justify-center mb-16;
+    }
+
+    &__headline {
+        @apply flex items-end font-recife font-light text-6xl mb-6;
+        line-height: .7;
+    }
+}
+
+.mantras {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 2xl:gap-24;
+}
+
+.mantra {
+    &__headline {
+        @apply font-recife font-light mb-4;
+        font-size: 2.5rem;
+        @screen  2xl {
+        font-size: 2.8rem;
+        }
+        line-height: 1;
+    }
+
+    &__content {
+        @apply flex px-6;
+    }
+
+    &__pattern {
+        @apply bg-13 flex-shrink-0 bg-repeat-space;
+        width: 17px;
+        background-image: url('../../img/pattern_dot.png');
+    }
+
+    &__copy {
+    	@apply pl-4 py-3;
+    }
+
+
+}

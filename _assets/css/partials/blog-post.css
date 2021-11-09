@@ -1,0 +1,20 @@
+.blog-post {
+	@apply px-4 xl:pl-main xl:pr-64 lg:mb-32;
+	&__title {
+		@apply leading-none font-recife font-light text-[2.2rem] md:text-6xl mb-3;
+	}
+	&__summary {
+		@apply font-normal border-brand-gray-600 border-b pb-4 mb-4 ;
+	}
+	&__author {
+		@apply mb-8 font-light;
+		a {
+			@apply underline text-brand-magenta-500;
+			transition: color .3s ease-in-out;
+			&:hover {
+				@apply text-brand-blue-500 no-underline;
+			}
+		}
+
+	}
+}

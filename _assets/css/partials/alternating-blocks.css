@@ -1,0 +1,104 @@
+.alternating-blocks {
+    @apply flex flex-col px-4 lg:px-16 xl:pl-0 2xl:pr-nav;
+}
+
+.alternating-block {
+    @apply lg:flex items-center mb-20 w-full;
+
+    &:nth-of-type(even) {
+        @apply md:flex-row-reverse md:self-end;
+        .alternating-block__text {
+            @apply md:text-right md:flex md:flex-col md:items-end;
+        }
+
+@screen md {
+
+        .alternating-block__visual-pattern {
+            left: -2.5rem;
+            right: auto;
+            animation: patternScrollDiagRight 1s linear infinite;
+
+}
+        }
+
+    }
+
+    @screen 2xl {
+        width: 86%;
+    }
+
+    &__visual {
+        @apply flex mb-6 lg:mb-0 relative w-full lg:w-1/3;
+
+        * {
+
+            transform: scale(0.85);
+            transform-origin: bottom left;
+
+            @screen md {
+                transform: none;
+            }
+        }
+
+        &:hover {
+            .alternating-block__visual-pattern {
+
+                animation-play-state: running !important;
+            }
+        }
+
+
+        &-pattern {
+            @apply bg-13;
+            background-image: url('../../img/pattern_dot.png');
+            display: block;
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            right: -2.5rem;
+            top: -2.5rem;
+            z-index: -1;
+            animation: patternScrollDiagLeft 1s linear infinite;
+            animation-play-state: paused !important;
+            background-position-y: 0%;
+        }
+    }
+
+    &__text {
+        @apply w-full lg:w-2/3 lg:px-24;
+    }
+
+    &__headline {
+        @apply leading-none font-recife font-light text-[2.2rem] md:text-6xl mb-3 md:mb-6;
+    }
+
+    &__copy {
+        @apply mb-8 text-lg;
+        line-height: 32px;
+    }
+}
+
+@keyframes patternScrollDiagRight {
+    from {
+        background-position-y: 0;
+        background-position-x: 0;
+    }
+
+    to {
+        background-position-y: 13px;
+        background-position-x: 13px;
+    }
+}
+
+@keyframes patternScrollDiagLeft {
+    from {
+        background-position-y: 0;
+        background-position-x: 0;
+    }
+
+    to {
+        background-position-y: 13px;
+        background-position-x: -13px;
+    }
+}

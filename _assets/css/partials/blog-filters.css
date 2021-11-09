@@ -1,0 +1,34 @@
+.blog-filters {
+    @apply text-center relative mb-12 bg-13 p-4;
+    transition: padding .5s ease-in-out;
+    background-image: url('../../img/pattern_dot.png');
+
+    &__button {
+        @apply absolute;
+        top: -.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+
+    &__content {
+        @apply overflow-hidden bg-brand-gray-400;
+        height: 0px;
+    }
+
+    &__list {
+        @apply p-4 lg:p-16 ;
+
+        @screen md {
+            column-count: 2;
+        }
+    }
+}
+
+.blog-filter {
+    @apply font-recife font-light text-brand-magenta-500 text-2xl md:text-3xl;
+
+    &:not(:last-of-type) {
+        @apply mb-4 md:mb-8;
+    }
+}

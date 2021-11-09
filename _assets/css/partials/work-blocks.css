@@ -1,0 +1,18 @@
+.work-blocks {
+	> * {
+		@apply mb-20;
+	}
+	&__video {
+		@apply w-full xl:w-3/4 mx-auto;
+	} 
+	&__image {
+		@apply w-full
+	}
+	&__three-image {
+		@apply grid grid-cols-1 md:grid-cols-3 gap-1;
+	}
+	&__two-image {
+		@apply grid grid-cols-1 md:grid-cols-2 gap-1;
+	}
+	
+}
