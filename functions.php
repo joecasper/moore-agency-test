@@ -174,4 +174,5 @@
     function my_toolbars( $toolbars ) {
         return array();
     }
+
 ?>
